@@ -1,6 +1,14 @@
 package com.luv2code.springdemo;
 
 public class BaseballCoach implements Coach {
+	// define private field for the dependency
+	private FortuneService fortuneService;
+	
+	// define a constructor for dependency injection
+	public BaseballCoach(FortuneService thefortuneService ) {
+		fortuneService = thefortuneService;	
+	}
+	
 	
 	@Override
 	public String getDailyWorkout() {
@@ -9,8 +17,8 @@ public class BaseballCoach implements Coach {
 
 	@Override
 	public String getDailyFortune() {
-		// TODO Auto-generated method stub
-		return null;
+		//use my fortune service to get a fortune
+		return fortuneService.getFortune();
 	}
 
 }
