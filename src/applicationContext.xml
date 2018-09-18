@@ -30,7 +30,19 @@
     id="myCricketCoach" 
     class= "com.luv2code.springdemo.CricketCoach">
      
-    <property name="fortuneService" ref="myFortuneService"/>         
+     <!-- setup setter injection  -->
+     <!--  
+     in <property name=[name] ref=myFortuneService"/> 
+     will look for in the CricketCoach a setter for set[name]
+     [ref] - refers to what we will be injecting
+     
+     same for literal values
+     -->
+    <property name="fortuneService" ref="myFortuneService"/> 
+    
+    <!-- inject literal values -->
+    <property name="emailAddress" value="bestcoach@gmail.com"/>
+    <property name="team" value="Blue Jays"/>
      
     </bean>
     

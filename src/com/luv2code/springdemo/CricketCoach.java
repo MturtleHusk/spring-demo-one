@@ -1,8 +1,16 @@
 package com.luv2code.springdemo;
 
 public class CricketCoach implements Coach {
+	
+	// adding private fields
+	private String emailAddress;
+	private String team;	
+	
+
+	
 	// define private field for the dependency
-	private FortuneService fortuneService;	
+	private FortuneService fortuneService;
+	
 	
 	public CricketCoach() {
 		System.out.println("insid cricket no-arg constructor ");
@@ -23,5 +31,28 @@ public class CricketCoach implements Coach {
 	public String getDailyFortune() {	
 		return fortuneService.getFortune();
 	}
+	
+	public void setEmailAddress(String emailAddress) {
+		System.out.println("inside setter of email");
+		this.emailAddress = emailAddress;
+	}
+	
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+	
+
+	public void setTeam(String team) {
+		System.out.println("inside setter of team");
+		System.out.println("inside setter method");
+		this.team = team;
+	}
+	
+	public String getTeam() {
+		return team;
+	}
+	
+	
+
 
 }
