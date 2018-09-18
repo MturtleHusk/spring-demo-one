@@ -11,7 +11,7 @@
     
     <!-- define the dependency -->
     <bean
-    id="myFortune"    
+    id="myFortuneService"    
     class= "com.luv2code.springdemo.HappyFortuneService">       
     <!-- shortcut copy qualified name, right click on HappyFortuneService --> 
     
@@ -19,10 +19,18 @@
     
     <bean
      id="myCoach" 
-     class= "com.luv2code.springdemo.BaseballCoach">    
+     class= "com.luv2code.springdemo.TrackCoach">    
      
      <!--  set up constructor injection -->
-     <constructor-arg ref="myFortune"/>
+     <constructor-arg ref="myFortuneService"/>
+     
+    </bean>
+    
+    <bean
+    id="myCricketCoach" 
+    class= "com.luv2code.springdemo.CricketCoach">
+     
+    <property name="fortuneService" ref="myFortuneService"/>         
      
     </bean>
     

@@ -7,7 +7,7 @@ public class MyApp {
 		// create the object
 		// Coach - the interface - has
 		// coding top the interface no the implementation
-		Coach theCoach = new TrackCoach();
+		Coach theCoach = new TrackCoach(); 
 		
 		// use the object
 		System.out.println(theCoach.getDailyWorkout());
